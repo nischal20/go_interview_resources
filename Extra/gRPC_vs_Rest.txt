@@ -28,6 +28,7 @@ WebSockets Complexity: Adds complexity and deviates from standard REST practices
 Built-in Features:
 gRPC has built-in support for load balancing, retries, deadlines, and cancellations.
 REST requires separate implementation for these features, increasing overhead.
+gRPC has excellent support for load balancing and service discovery, which makes it easy to deploy and manage large-scale distributed systems making it an ideal choice for building large-scale distributed systems that can handle high volumes of traffic. This can significantly reduce the operational overhead of managing complex systems, allowing developers to focus on building great applications.
 
 Type Safety and Contract First:
 gRPC ensures strong typing and a contract-first approach with Interface Definition Language (IDL).
