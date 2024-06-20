@@ -1,27 +1,40 @@
 Why gRPC is faster than REST:
 
 Protocol Efficiency:
-
 gRPC uses HTTP/2 (binary protocol), supporting multiplexing and reducing latency.
 REST uses HTTP/1.1 (text-based protocol), typically leading to larger data sizes and increased transmission time.
-Serialization:
 
+Serialization:
 gRPC uses Protocol Buffers (protobuf),which is a binary serialization format and is compact and faster to serialize/deserialize.
 REST uses JSON, which is text-based, larger in size, and slower to process.
-Communication Model:
 
+Protobuf's binary serialization format results in a message that is approximately half the size of the equivalent JSON representation. This compactness leads to more efficient data transmission, particularly beneficial in bandwidth-constrained environments and high-performance applications. The reduced message size directly translates to lower latency and higher throughput, making Protobuf and gRPC a more efficient choice compared to JSON and REST for many use cases.
+
+Communication Model:
 gRPC supports efficient streaming (client-side, server-side, and bi-directional).
 REST primarily uses request-response communication, adding latency for each interaction.
-Built-in Features:
 
+gRPC Streaming:
+
+Connection Efficiency: Uses a single connection for multiple messages.
+Reduced Latency: Real-time updates with minimal delay.
+Resource Utilization: Efficient use of bandwidth and server resources.
+REST:
+
+Connection Overhead: Each request-response cycle introduces latency.
+Polling Drawbacks: Inefficient for real-time updates due to frequent requests.
+WebSockets Complexity: Adds complexity and deviates from standard REST practices.
+
+Built-in Features:
 gRPC has built-in support for load balancing, retries, deadlines, and cancellations.
 REST requires separate implementation for these features, increasing overhead.
-Type Safety and Contract First:
 
+Type Safety and Contract First:
 gRPC ensures strong typing and a contract-first approach with Interface Definition Language (IDL).
 REST often involves dynamic typing and a contract-last approach, potentially leading to inefficiencies.
-Performance Benchmarks:
 
+Performance Benchmarks:
 gRPC typically outperforms REST in high-frequency, low-latency communication scenarios.
 REST is more performant for simpler CRUD operations but generally lags in raw performance compared to gRPC.
+
 These points highlight the architectural and operational efficiencies that make gRPC a faster option for certain use cases, particularly in high-performance microservices and internal service-to-service communication.
