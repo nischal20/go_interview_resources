@@ -6,7 +6,7 @@ gRPC uses HTTP/2 (binary protocol), supporting multiplexing and reducing latency
 REST uses HTTP/1.1 (text-based protocol), typically leading to larger data sizes and increased transmission time.
 Serialization:
 
-gRPC uses Protocol Buffers (protobuf), which is compact and faster to serialize/deserialize.
+gRPC uses Protocol Buffers (protobuf),which is a binary serialization format and is compact and faster to serialize/deserialize.
 REST uses JSON, which is text-based, larger in size, and slower to process.
 Communication Model:
 
