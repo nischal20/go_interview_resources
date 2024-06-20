@@ -37,3 +37,14 @@ func main() {
     PrintArea(r)
     PrintArea(c)
 }
+
+/*
+Open for Extension
+Your Shape interface allows you to add new shapes (e.g., Rectangle, Circle) without modifying the existing code. You can define new types that implement the Shape interface and provide their own implementation of the Area method.
+
+For example, if you wanted to add a Triangle shape, you could do so without changing any of the existing Rectangle or Circle code
+
+Closed for Modification
+Your existing code, including the PrintArea function, does not need to be changed to accommodate new shapes. The PrintArea function works with any type that implements the Shape interface, so it remains unchanged even when new shapes are added.
+
+*/
